@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriales | Soprimico</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">SOPRIMICO</a>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar Nmap, Metasploit, OSINT...">
+            <div id="search-results"></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="tutorials.html">Tutoriales</a></li>
+                <li><a href="classes.html">Clases</a></li>
+                <li><a href="help.html">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h1>Tutoriales de Kali Linux</h1>
+            <p>Aprende paso a paso con comandos reales. Nuevos tutoriales cada semana.</p>
+        </div>
+        
+        <div class="grid-container">
+            <!-- Tutorial 1: Nmap -->
+            <div class="card">
+                <span style="font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px;">Pentesting - Principiante</span>
+                <h3 style="margin-top: 10px;">Nmap: Escaneo de Redes</h3>
+                <p>El primer paso en cualquier auditoría. Aprende a descubrir hosts y servicios.</p>
+                <pre><code>nmap -sV -sC -oA scan 192.168.1.1</code></pre>
+                <p style="font-size: 0.85rem; color: #666;">-sV: Detecta versiones. -sC: Scripts por defecto. -oA: Guarda output.</p>
+                <a href="#" class="btn btn-outline">Leer Tutorial Completo</a>
+            </div>
+
+            <!-- Tutorial 2: Metasploit -->
+            <div class="card">
+                <span style="font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px;">Pentesting - Intermedio</span>
+                <h3 style="margin-top: 10px;">Metasploit: Primer Exploit</h3>
+                <p>Configura Metasploit y lanza tu primer exploit contra una máquina vulnerable.</p>
+                <pre><code>msfconsole
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+exploit</code></pre>
+                <a href="#" class="btn btn-outline">Leer Tutorial Completo</a>
+            </div>
+
+            <!-- Tutorial 3: OSINT -->
+             <div class="card">
+                <span style="font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px;">OSINT - Principiante</span>
+                <h3 style="margin-top: 10px;">theHarvester: Recolección</h3>
+                <p>Obtén emails, subdominios y nombres de empleados de una empresa.</p>
+                <pre><code>theHarvester -d empresa.com -b google -l 500</code></pre>
+                <a href="#" class="btn btn-outline">Leer Tutorial Completo</a>
+            </div>
+
+            <!-- Tutorial 4: SQLmap -->
+            <div class="card">
+                <span style="font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px;">Pentesting - Avanzado</span>
+                <h3 style="margin-top: 10px;">SQLmap: Inyección SQL</h3>
+                <p>Automatiza la detección y explotación de inyecciones SQL en aplicaciones web.</p>
+                <pre><code>sqlmap -u "http://test.com?id=1" --dbs --batch</code></pre>
+                <a href="#" class="btn btn-outline">Leer Tutorial Completo</a>
+            </div>
+
+            <!-- Tutorial 5: Sherlock -->
+            <div class="card">
+                <span style="font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px;">OSINT - Principiante</span>
+                <h3 style="margin-top: 10px;">Sherlock: Buscar Usuarios</h3>
+                <p>Rastrea un nombre de usuario en múltiples redes sociales y foros.</p>
+                <pre><code>python3 sherlock.py usuario123</code></pre>
+                <a href="#" class="btn btn-outline">Leer Tutorial Completo</a>
+            </div>
+
+             <!-- Tutorial 6: Hydra -->
+            <div class="card">
+                <span style="font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px;">Pentesting - Intermedio</span>
+                <h3 style="margin-top: 10px;">Hydra: Fuerza Bruta</h3>
+                <p>Ataca servicios de autenticación con ataques de diccionario.</p>
+                <pre><code>hydra -l admin -P rockyou.txt ssh://192.168.1.1</code></pre>
+                <a href="#" class="btn btn-outline">Leer Tutorial Completo</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Soprimico. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
